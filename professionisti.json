@@ -1,0 +1,30 @@
+[
+  {
+    "nome": "Mario Rossi",
+    "professione": "Massaggiatore",
+    "descrizione": "Specializzato in massaggi sportivi e rilassanti.",
+    "citta": "Milano",
+    "contatti": {
+      "email": "mario.rossi@example.com",
+      "telefono": "+39 123 456 7890",
+      "sito": "https://mariorossi.it"
+    },
+    "immagine": "https://via.placeholder.com/100",
+    "lat": 45.4642,
+    "lng": 9.19
+  },
+  {
+    "nome": "Chiara Verdi",
+    "professione": "Osteopata",
+    "descrizione": "Esperta in osteopatia pediatrica e sportiva.",
+    "citta": "Bologna",
+    "contatti": {
+      "email": "chiara.verdi@example.com",
+      "telefono": "+39 987 654 3210",
+      "sito": "https://chiaraverdi.it"
+    },
+    "immagine": "https://via.placeholder.com/100",
+    "lat": 44.4949,
+    "lng": 11.3426
+  }
+]

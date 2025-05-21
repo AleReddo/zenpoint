@@ -1,19 +1,5 @@
 [
   {
-    "nome": "",
-    "professione": "",
-    "descrizione": "",
-    "citta": "",
-    "contatti": {
-      "email": "",
-      "telefono": "",
-      "sito": ""
-    },
-    "immagine": "",
-    "lat": null,
-    "lng": null
-  },
-  {
     "nome": "Alessandro Rossi",
     "professione": "PT",
     "descrizione": "Coaching 1 to 1",

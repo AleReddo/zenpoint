@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -13,9 +12,11 @@
     <h1>Alessandro Rossi</h1>
     <p><em>PT</em> - Santa Giustina</p>
     <p>Coaching 1 to 1</p>
-    <img src="https://via.placeholder.com/100" style="width:100px; border-radius: 50%;"><br><br>
+    <img src="no" style="width:100px; border-radius: 50%;"><br><br>
     <div id="user-info"></div>
-    <div id="login-area"><button onclick="signIn()">Accedi con Google per lasciare una recensione</button></div>
+    <div id="login-area">
+      <button onclick="signIn()">Accedi con Google per lasciare una recensione</button>
+    </div>
     <div id="review-form" style="display:none;">
       <h2>Lascia una recensione</h2>
       <textarea id="comment" rows="4" cols="50" placeholder="Scrivi la tua recensione..."></textarea><br>
@@ -34,7 +35,7 @@
     <div id="reviews"></div>
     <script type="module">
       import * as mod from './recensioni.js';
-      mod.loadReviews("alessandro-rossi");
+      mod.loadReviews('alessandro-rossi');
     </script>
   </section>
 </body>

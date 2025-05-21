@@ -1,8 +1,23 @@
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #f6f9f8;
   color: #333;
+}
+
+nav {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 header {
@@ -46,4 +61,13 @@ ul {
 li {
   padding: 0.5rem 0;
   border-bottom: 1px solid #eee;
+}
+
+.pricing-box {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 250px;
+  text-align: center;
+  margin: 1rem auto;
 }

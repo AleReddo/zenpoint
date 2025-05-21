@@ -1,16 +1,16 @@
 [
   {
     "nome": "Alessandro Rossi",
-    "professione": "",
-    "descrizione": "Personal Trainer",
-    "citta": "Coaching 1 to 1",
+    "professione": "Personal Trainer",
+    "descrizione": "Coaching 1 to 1",
+    "citta": "Santa Giustina, Belluno",
     "contatti": {
-      "email": "Santa Giustina, Belluno",
-      "telefono": "ale.avoscan@gmail.com",
-      "sito": 3488278016
+      "email": "ale.avoscan@gmail.com",
+      "telefono": 3488278016,
+      "sito": "nessuno"
     },
-    "immagine": "nessuno",
+    "immagine": "lol",
     "lat": null,
-    "lng": null
+    "lng": 54
   }
 ]

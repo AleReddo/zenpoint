@@ -1,30 +1,24 @@
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chiara Verdi - ZenPoint</title>
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <a href="../index.html">Home</a>
-  </nav>
-
+  <nav><a href="index.html">Home</a></nav>
   <section style="padding: 2rem;">
     <h1>Chiara Verdi</h1>
     <p><em>Nutrizionista</em> - Belluno</p>
     <p>Piani alimentari personalizzati</p>
     <img src="https://via.placeholder.com/100" style="width:100px; border-radius: 50%;"><br><br>
-
     <div id="user-info"></div>
-    <div id="login-area">
-      <button onclick="signIn()">Accedi con Google per lasciare una recensione</button>
-    </div>
-
+    <div id="login-area"><button onclick="signIn()">Accedi con Google per lasciare una recensione</button></div>
     <div id="review-form" style="display:none;">
       <h2>Lascia una recensione</h2>
-      <textarea id="comment" placeholder="Scrivi la tua recensione..." rows="4" cols="50"></textarea><br>
+      <textarea id="comment" rows="4" cols="50" placeholder="Scrivi la tua recensione..."></textarea><br>
       <label>Voto:
         <select id="rating">
           <option value="1">1 stella</option>
@@ -36,7 +30,6 @@
       </label><br><br>
       <button onclick="submitReview('chiara-verdi')">Invia Recensione</button>
     </div>
-
     <h2>Recensioni ricevute</h2>
     <div id="reviews"></div>
     <script type="module">

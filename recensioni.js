@@ -1,3 +1,4 @@
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
 import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
 import { getFirestore, collection, addDoc, getDocs, query, where, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
@@ -17,9 +18,7 @@ const db = getFirestore(app);
 const provider = new GoogleAuthProvider();
 
 function signIn() {
-  signInWithPopup(auth, provider)
-    .then(() => {})
-    .catch(error => alert(error.message));
+  signInWithPopup(auth, provider).catch(error => alert(error.message));
 }
 
 onAuthStateChanged(auth, user => {
@@ -30,18 +29,16 @@ onAuthStateChanged(auth, user => {
   }
 });
 
-async function submitReview() {
+async function submitReview(id) {
   const user = auth.currentUser;
   if (!user) return alert("Devi accedere prima");
-
   const comment = document.getElementById("comment").value;
   const rating = parseInt(document.getElementById("rating").value);
-
   if (!comment) return alert("Scrivi qualcosa!");
 
   try {
     await addDoc(collection(db, "recensioni"), {
-      professionistaId: "alessandro-rossi",
+      professionistaId: id,
       nome: user.displayName,
       email: user.email,
       voto: rating,
@@ -55,11 +52,10 @@ async function submitReview() {
   }
 }
 
-async function loadReviews() {
+async function loadReviews(id) {
   const reviewBox = document.getElementById("reviews");
-  const q = query(collection(db, "recensioni"), where("professionistaId", "==", "alessandro-rossi"));
+  const q = query(collection(db, "recensioni"), where("professionistaId", "==", id));
   const docs = await getDocs(q);
-
   docs.forEach(doc => {
     const d = doc.data();
     const item = document.createElement("div");
@@ -69,6 +65,6 @@ async function loadReviews() {
   });
 }
 
-loadReviews();
 window.signIn = signIn;
 window.submitReview = submitReview;
+window.loadReviews = loadReviews;

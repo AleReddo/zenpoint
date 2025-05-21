@@ -1,79 +1,30 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZenPoint</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ZenPoint - Mappa</title>
+  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
 </head>
 <body>
+  <nav>
+    <a href="index.html">Mappa</a>
+    <a href="abbonamenti.html">Abbonamenti</a>
+    <a href="chi-siamo.html">Chi siamo</a>
+    <a href="contatti.html">Contatti</a>
+  </nav>
+
   <header>
     <h1>ZenPoint</h1>
     <p>Trova i professionisti del benessere vicino a te</p>
   </header>
-
-  <p style="text-align:center;">
-    <a href="mailto:info@zenpoint.it?subject=Richiesta%20accesso%20registrazione%20ZenPoint">
-      <button style="padding: 10px 20px; font-size: 1.2rem; background-color: #5dc3b5; color: white; border: none; border-radius: 8px;">
-        Richiedi l'accesso per registrarti
-      </button>
-    </a>
-  </p>
 
   <div id="map"></div>
 
   <section id="list">
     <h2>Elenco professionisti</h2>
     <ul id="professionisti-list"></ul>
-  </section>
-
-  <section id="pricing">
-    <h2 style="text-align:center;">Scegli il tuo abbonamento</h2>
-    <div style="display:flex; justify-content:center; gap: 2rem; flex-wrap: wrap; padding: 2rem;">
-      <div style="border: 1px solid #ccc; border-radius: 10px; padding: 1rem; max-width: 250px; text-align:center;">
-        <h3>Mensile</h3>
-        <p>€19 al mese</p>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-          <input type="hidden" name="cmd" value="_s-xclick">
-          <input type="hidden" name="hosted_button_id" value="MENSILE_BUTTON_ID">
-          <input type="submit" value="Abbonati" style="padding:10px 20px;background:#5dc3b5;color:white;border:none;border-radius:8px;">
-        </form>
-      </div>
-      <div style="border: 1px solid #ccc; border-radius: 10px; padding: 1rem; max-width: 250px; text-align:center;">
-        <h3>Semestrale</h3>
-        <p>€99 ogni 6 mesi</p>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-          <input type="hidden" name="cmd" value="_s-xclick">
-          <input type="hidden" name="hosted_button_id" value="SEMESTRALE_BUTTON_ID">
-          <input type="submit" value="Abbonati" style="padding:10px 20px;background:#5dc3b5;color:white;border:none;border-radius:8px;">
-        </form>
-      </div>
-      <div style="border: 1px solid #ccc; border-radius: 10px; padding: 1rem; max-width: 250px; text-align:center;">
-        <h3>Annuale</h3>
-        <p>€179 all'anno</p>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-          <input type="hidden" name="cmd" value="_s-xclick">
-          <input type="hidden" name="hosted_button_id" value="ANNUALE_BUTTON_ID">
-          <input type="submit" value="Abbonati" style="padding:10px 20px;background:#5dc3b5;color:white;border:none;border-radius:8px;">
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact-after-payment">
-    <h2 style="text-align:center;">Hai già effettuato il pagamento?</h2>
-    <p style="text-align:center; font-size: 1.1rem;">
-      Dopo aver completato l'acquisto del tuo abbonamento, clicca qui per inviarci <br>
-      i tuoi <strong>dati di fatturazione</strong> e i contatti necessari per essere pubblicato su ZenPoint.
-    </p>
-    <p style="text-align:center;">
-      <a href="https://forms.gle/8TJUgbRwDTEXp8JL9" target="_blank">
-        <button style="padding:10px 20px; font-size:1.1rem; background:#5dc3b5; color:white; border:none; border-radius:8px;">
-          Invia i tuoi dati post-pagamento
-        </button>
-      </a>
-    </p>
   </section>
 
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>

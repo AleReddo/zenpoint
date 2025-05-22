@@ -1,6 +1,5 @@
 
-let map = L.map('map').setView([43.7696, 11.2558], 6);
-
+let map = L.map('map').setView([46.14, 12.21], 8);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '© OpenStreetMap contributors'
 }).addTo(map);
@@ -54,7 +53,7 @@ fetch('professionisti.json')
   });
 
 async function getCoordinatesFromCity(city) {
-  const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(city)}`);
+  const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(city + ", Italia")}`);
   const results = await response.json();
   if (results.length === 0) return null;
   return {
@@ -95,6 +94,7 @@ async function applyFilters() {
   const filtered = professionistiData.filter((p) => {
     if (!p.lat || !p.lng) return false;
     const distance = calculateDistance(userCoords.lat, userCoords.lng, p.lat, p.lng);
+    console.log(`${p.nome} è a ${distance.toFixed(2)} km da ${city}`);
     if (distance > radius) return false;
     if (profession && p.professione !== profession) return false;
     return true;
